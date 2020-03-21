@@ -21,8 +21,5 @@
     "jest": "^25.1.0",
     "nodemon": "^2.0.2",
     "sequelize-cli": "^5.5.1"
-  },
-  "engines": {
-    "node": "^12.6.0"
   }
 }
