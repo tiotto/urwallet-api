@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "test": "jest"
   },
   "author": "Thays Giotto <giotto.thays@gmail.com>",
   "license": "ISC",
@@ -17,7 +18,11 @@
     "sequelize": "^5.21.5"
   },
   "devDependencies": {
+    "jest": "^25.1.0",
     "nodemon": "^2.0.2",
     "sequelize-cli": "^5.5.1"
+  },
+  "engines": {
+    "node": "12.6.0"
   }
 }
