@@ -6,7 +6,8 @@ class Account extends Model {
       email: DataTypes.STRING,
       bitcoin: DataTypes.INTEGER,
       britas: DataTypes.INTEGER,
-      total: DataTypes.INTEGER
+      total: DataTypes.INTEGER,
+      password_hash: DataTypes.STRING
     }, {
       sequelize
     })

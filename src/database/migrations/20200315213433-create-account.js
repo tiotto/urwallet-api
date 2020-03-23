@@ -13,6 +13,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+      password_hash: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       bitcoin: {
         type: Sequelize.INTEGER
       },
