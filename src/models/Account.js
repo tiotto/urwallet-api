@@ -1,4 +1,5 @@
 const { Model, DataTypes } = require('sequelize')
+const bcrypt = require('bcryptjs')
 
 class Account extends Model {
   static init (sequelize) {
@@ -7,8 +8,17 @@ class Account extends Model {
       bitcoin: DataTypes.INTEGER,
       brita: DataTypes.INTEGER,
       total: DataTypes.INTEGER,
+      password: DataTypes.VIRTUAL,
       password_hash: DataTypes.STRING
-    }, {
+    },
+    {
+      hooks: {
+        beforeSave: async account => {
+          if (account.password) {
+            account.password_hash = await bcrypt.hash(account.password, 8)
+          }
+        }
+      },
       sequelize
     })
   }

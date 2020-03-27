@@ -14,9 +14,9 @@ module.exports = {
     return res.json(account)
   },
   async store (req, res) {
-    const email = req.body
+    const { email, password } = req.body
 
-    const account = await Account.create(email)
+    const account = await Account.create({ email, password })
 
     return res.json(account)
   }
