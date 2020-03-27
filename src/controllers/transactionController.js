@@ -9,8 +9,6 @@ module.exports = {
       include: { association: 'transactions' }
     })
 
-    console.log(account.transactions)
-
     return res.json(account)
   },
   async store (req, res) {

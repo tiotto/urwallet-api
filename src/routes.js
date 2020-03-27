@@ -8,6 +8,8 @@ const routes = express.Router()
 routes.get('/accounts', AccountController.index)
 routes.post('/accounts', AccountController.store)
 
+routes.get('/accounts/:account_id', AccountController.indexId)
+
 routes.get('/accounts/:account_id/transactions', TransactionController.index)
 routes.post('/accounts/:account_id/transactions', TransactionController.store)
 

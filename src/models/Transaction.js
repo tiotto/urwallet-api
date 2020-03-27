@@ -6,6 +6,7 @@ class Transaction extends Model {
       blockchain: DataTypes.STRING,
       type: DataTypes.STRING,
       amount: DataTypes.INTEGER,
+      value: DataTypes.INTEGER,
       timestamp: DataTypes.DATE
     }, {
       sequelize

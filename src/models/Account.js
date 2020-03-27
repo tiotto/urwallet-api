@@ -5,7 +5,7 @@ class Account extends Model {
     super.init({
       email: DataTypes.STRING,
       bitcoin: DataTypes.INTEGER,
-      britas: DataTypes.INTEGER,
+      brita: DataTypes.INTEGER,
       total: DataTypes.INTEGER,
       password_hash: DataTypes.STRING
     }, {
