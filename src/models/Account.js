@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize')
 const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken');
 
 class Account extends Model {
   static init (sequelize) {
@@ -21,6 +22,14 @@ class Account extends Model {
       },
       sequelize
     })
+  }
+
+  checkPassword(password) {
+    return bcrypt.compare(password, this.password_hash);
+  }
+
+  generateToken() {
+    return jwt.sign({ id: this.id }, process.env.APP_SECRET);
   }
 
   static associate (models) {

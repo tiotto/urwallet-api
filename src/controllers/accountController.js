@@ -16,6 +16,10 @@ module.exports = {
   async store (req, res) {
     const { email, password } = req.body
 
+    if (!email && !password) {
+      return res.status(401).json({ message: 'Unable to proceed without password or email'})
+    }
+
     const account = await Account.create({ email, password })
 
     return res.json(account)
