@@ -1,11 +1,9 @@
 const Account = require('../models/Account')
 
 class SessionController {
-  async store(req, res) {
-
+  async store (req, res) {
     console.log('caindo na session')
     const { email, password } = req.body
-
 
     const account = await Account.findOne({ where: { email } })
 
