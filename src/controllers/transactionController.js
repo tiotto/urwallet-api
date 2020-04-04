@@ -13,7 +13,7 @@ module.exports = {
   },
   async store (req, res) {
     const { account_id } = req.params
-    const { blockchain, type, amount } = req.body
+    const { blockchain, type, amount, value } = req.body
 
     const account = await Account.findByPk(account_id)
 
@@ -25,7 +25,8 @@ module.exports = {
       blockchain,
       type,
       amount,
-      account_id
+      account_id,
+      value
     })
 
     return res.json(transaction)
