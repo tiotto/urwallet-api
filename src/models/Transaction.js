@@ -5,8 +5,8 @@ class Transaction extends Model {
     super.init({
       blockchain: DataTypes.STRING,
       type: DataTypes.STRING,
-      amount: DataTypes.INTEGER,
-      value: DataTypes.INTEGER,
+      amount: DataTypes.FLOAT,
+      value: DataTypes.DECIMAL,
       timestamp: DataTypes.DATE
     }, {
       sequelize

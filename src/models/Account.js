@@ -6,9 +6,9 @@ class Account extends Model {
   static init (sequelize) {
     super.init({
       email: DataTypes.STRING,
-      bitcoin: DataTypes.INTEGER,
-      brita: DataTypes.INTEGER,
-      total: DataTypes.INTEGER,
+      bitcoin: DataTypes.FLOAT,
+      brita: DataTypes.FLOAT,
+      total: DataTypes.DECIMAL,
       password: DataTypes.VIRTUAL,
       password_hash: DataTypes.STRING
     },
